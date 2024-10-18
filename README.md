@@ -8,7 +8,6 @@ This website serves as a central platform for my work in software development an
 
 ## Features
 
-- **Personal Blog**: News, tutorials, and insights into my projects.
 - **Projects**: Information about my software development projects and Minecraft mods.
 - **Contact**: Ways to connect with me across different platforms.
 
