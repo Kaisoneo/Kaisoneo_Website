@@ -1,0 +1,355 @@
+/* Keyframe für die Slide-In Animation von oben */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Anwenden der Animation nur auf die Welcome-Sektion */
+.welcome {
+    background-color: #4b0082;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    position: relative;
+    overflow: hidden;
+    animation: slideInFromTop 1.5s ease-in-out; /* Slide-in Animation hinzufügen */
+}
+
+/* Anwenden der Animation auf den gesamten Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #d1d1d1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    animation: fadeIn 1.5s ease-in-out; /* Animation hinzufügen */
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.welcome {
+    background-color: #4b0082;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    position: relative;
+    overflow: hidden; /* Verhindert, dass Animationen aus dem Bereich herausragen */
+}
+
+/* Haupt-Schwebe-Effekt */
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Zusätzliche Partikel */
+.welcome .particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: drift 10s linear infinite;
+    opacity: 0.8;
+}
+
+/* Schwebende und driftende Animationen */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.2);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.welcome .particle:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    top: 20%;
+    left: 10%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.welcome .particle:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 70%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.welcome .particle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+.welcome .particle:nth-child(4) {
+    width: 40px;
+    height: 40px;
+    top: 80%;
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+/* Schwebende und driftende Animationen */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.2);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.about-me-box {
+    background-color: #2e2e2e;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.about-me-box h2 {
+    color: #b8a5f2;
+    margin-bottom: 20px;
+}
+
+.about-me-box p {
+    color: #d1d1d1;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about-button {
+    background-color: #4b0082;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.about-button:hover {
+    background-color: #6a0dad;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #4b0082;
+    margin: 40px 0;
+}
+
+/* Flexbox für die Anordnung der Boxen */
+.mods-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* Stil für den leeren linken Kasten */
+.empty-container {
+    background-color: #1a1a1a; /* Gleiche Farbe wie der Website-Hintergrund */
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stil für die Mod-Box */
+.mod-container {
+    background-color: #2e2e2e;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil für die Werbe-Box rechts */
+.ad-container {
+    background-color: #111;
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 275px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Notwendig für das platzierte Bild */
+    overflow: hidden; /* Damit nichts außerhalb des Containers herausragt */
+    height: 390px; /* Höhe erhöhen, um das Banner korrekt anzuzeigen */
+}
+
+/* Das Bild wird über den Text gelegt */
+.ad-container .ad-banner {
+    position: absolute; /* Bild wird absolut positioniert */
+    top: 0;             /* Positioniert das Bild an den oberen Rand */
+    left: 0;            /* Positioniert das Bild an den linken Rand */
+    width: 100%;       /* Passt das Bild an die Breite des Containers an */
+    height: auto;      /* Verhindert Verzerrung */
+    max-height: 100%;  /* Das Bild füllt den Container */
+    z-index: 1;        /* Über dem Text legen */
+}
+
+/* Unsichtbarer Text bleibt im Layout */
+.ad-container h2, .ad-container p {
+    visibility: hidden; /* Text ist unsichtbar, bleibt aber im DOM */
+    position: relative; /* Notwendig für die Positionierung */
+    z-index: 2;        /* Bleibt unter dem Bild */
+}
+
+.ad-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ad-container p {
+    font-size: 1rem;
+}
+
+.ad-container a {
+    color: #b8a5f2;    /* Farbe für den Affiliate-Link */
+    text-decoration: none;
+    z-index: 2;        /* Über dem Bild anzeigen */
+    position: relative; /* Notwendig für die Positionierung */
+}
+
+@media (max-width: 768px) {
+    /* Auf kleineren Bildschirmen untereinander anzeigen */
+    .mods-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .empty-container, .mod-container, .ad-container {
+        max-width: 90%;
+    }
+}
+
+.mod-container img {
+    max-width: 150px; /* Größe des Mod-Logos */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.download-button {
+    background-color: #4b0082;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.download-button img {
+    max-width: 30px; /* Größe des Logos im Button */
+    margin-right: 10px; /* Abstand zwischen Logo und Text */
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #a1a1a1;
+    padding: 20px;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: #a1a1a1;
+    text-decoration: none;
+    margin: 0 20px;
+    border-radius: 5px;
+    padding: 7px;
+    transition: background-color 0.5s;
+}
+
+footer a:hover {
+    background-color: #4b0082;
+    color: #ffffff;
+}
